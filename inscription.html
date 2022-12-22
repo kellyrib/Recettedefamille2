@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/inscription.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.css">
+    <link rel="stylesheet" href="./css/common.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscription</title>
+</head>
+<body> 
+    <div class="container-fluid sticky-top ">
+        <section class="row ">
+          <div class="col-12 col-md-12 col-lg-12 col-xxl-12 ">
+            <nav class="navbar bg-light" style="background-image: url(./images/mosaique.jpg) ;">
+              <div class="container-fluid d-flex justify-content-center">
+                <a class="navbar-brand " href="./index.html">
+                  <img src="./images/logoRecette-removebg-preview.png" alt="Logo" width="120" height="120"
+                    class="d-inline-block align-center rounded-circle custom-shadow">
+                </a>
+              </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg bg-light">
+              <div class="container-fluid">
+                <a class="navbar-brand custom-vert" href="./index.html">Recette de famille</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                      <a class="nav-link active custom-bleu " aria-current="page" href="./livre.html">Livre de recette</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active custom-bleu" href="./menu.html">Menu de la semaine</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2  " type="search" placeholder="Rechercher une recette"
+                      aria-label="Search">
+                    <button class="btn custom-bleu  " type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+    
+        </section>
+      </div>
+        <fieldset class="fieldset">
+            <legend class="legend">Inscription</legend>
+
+            <form action="">
+                <div id="email">
+                    <label for="email">Votre adresse e-mail* :</label><br>
+                    <input type="email" name="email" id="mail"><br>
+                </div>
+                <br>
+                <div id="nom">
+                    <label for="text">Votre nom *:</label><br>
+                    <input type="text" name="nom" id="nomI"><br>
+                </div>
+                <br>
+                <div id="prenom">
+                    <label for="text">Votre prénom *:</label><br>
+                    <input type="text" name="prénom" id="prénomI"><br>
+                </div>
+                <br>
+                <div id="mdp">
+                    <label for="password"> Votre mot de passe* :</label>
+                    <input type="password" id="password" name="password" minlength="8" required>
+                </div>
+                <br>
+                <div id="mdp2">
+                    <label for="password"> Confimer votre mot de passe* :</label>
+                    <input type="password" id="password2" name="password2" minlength="8" required>
+                </div>
+                <br>
+                <div id="check">
+                    <label for="check">Faites vous déjà partie d'une famille ?</label>
+                    <input type="checkbox" id="oui" name="oui">
+                    <label for="check">Oui</label>
+                    <input type="checkbox" id="non" name="non">
+                    <label for="check">Non</label>
+                </div>
+                <br>
+                <div id="inscrit">
+                    <label for="text">Entrez votre code famille:</label><br>
+                    <input type="text" name="code" id="code"><br>
+                </div>
+                <br>
+                <div id="non-inscrit">
+                    <label for="text">votre code famille:</label><br>
+                    <input type="text" name="newcode" id="newcode"><br>
+                </div>
+                <br>
+                <div id="invit">
+                    <label for="email">Invitez les membres de votre famille* :</label><br>
+                    <input type="email" name="emailf" id="mailf"><br>
+                    <input type="email" name="emailf" id="mailf"><br>
+                    <input type="email" name="emailf" id="mailf"><br>
+                    <input type="email" name="emailf" id="mailf"><br>
+                    <input type="email" name="emailf" id="mailf"><br>
+                </div>
+
+                <div id="bouton">
+                    <button type="submit" name="submit" id="button">Inscription</button>
+                </div>
+            </form>
+        </fieldset>
+    </section>
+    <section class="deuxieme">
+        <p>déjà inscrit ?</p>
+        <a href="connexion.html">Cliquez ici</a>
+    </section>
+
+    <section id="footer">
+        <p>mentions légales</p>
+        <p>site crée par Christine Dos Santos, Amandine Pesquet et Kelly Ribeiro</p>
+        <p>nous contacter</p>
+    </section>
+    
+    
+</body>
+</html>
