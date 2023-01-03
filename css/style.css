@@ -20,31 +20,23 @@
     font-style: normal;
 
 }
-
-
-/*body*/
-
-/* entete*/
-#titre
-{
-    margin: auto;
-    text-align: center;
-    position:absolute;
-    top: 5%;
-    left: 30%;
-    font-family: 'Christmas Day';
-}
-#entete img
-{
-    width: 100%;
- 
+@font-face {
+    font-family: 'Shintia Script';
+    src: url('../fonts/shintia/ShintiaScript.eot');
+    src: url('../fonts/shintia/ShintiaScript.eot') format('embedded-opentype'),
+        url('../fonts/shintia/ShintiaScript.woff2') format('woff2'),
+        url('../fonts/shintia/ShintiaScript.woff') format('woff'),
+        url('../fonts/shintia/ShintiaScript.ttf') format('truetype'),
+        url('../fonts/shintia/ShintiaScript.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-h1
-{
-    margin: auto;
-    font-size: 80px;
-}
+
+
+
+
 
 /*présentation*/
 #présentation 
@@ -84,9 +76,9 @@ input[type=text] {
  /*savoir faire*/
  h2
  {
-    font-family: 'Jangthai';
+    font-family: 'Shintia Script';
     font-size: 50px;
-    color: #83C5BE;
+    color: #c79d6f;
     text-align: center;
     margin-top: 5%;
  }
@@ -178,136 +170,10 @@ input[type=text] {
 {
     margin-top: 7%;
 }
-/*cuisinière*/
-#cuisinière
-{
-    margin-top: 7%;
-}
-#cuisinière h2
-{
-    text-align: center;
-    margin-bottom: 7%;
-}
-#A 
-{
-   width: 65%;
-}
-#B
-{
-   width: 65%;
-}
-#C
-{
-   width: 65%;
-}
-#D
-{
-   width: 65%;
-}
-#E
-{
-   width: 65%;
-}
-#F
-{
-   width: 65%;
-}
-#G
-{
-   width: 65%;
-}
-#photo
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#photo p
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #77A8CC;
-}
-#tiapatricia
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-}
-#tiapatricia:hover
-{
-    opacity: 0.5;
-}
 
-#tialinda
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-}
-#tialinda:hover
-{
-    opacity: 0.5;
-}
-#tiaolivia
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-}
-#tiaolivia:hover
-{
-    opacity: 0.5;
-}
-#tiajesus
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-}
-#tiajesus:hover
-{
-    opacity: 0.5;
-}
-#tiamen
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-}
-#tiamen:hover
-{
-    opacity: 0.5;
-}
-#primatatiana
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-}
-#primatatiana:hover
-{
-    opacity: 0.5;
-}
-#primaleticia
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 1;
-}
-#primaleticia:hover
-{
-    opacity: 0.5;
-}
+
+
+
 
 /* footer*/
 #footer
@@ -319,27 +185,11 @@ input[type=text] {
     justify-content: space-around;
     margin-top: 5%;
 }
-#ingrédient p
-{
-    color:#FBFCF4;
-    border: #77A8CC 2px solid;
-    border-radius: 50% ;
-    width: 100px;
-    height: 100px;
-    box-shadow: 5px 5px 15px 5px #83C5BE ;
-    background-color: #77A8CC;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    opacity: 1;
 
+.aliment {
+    color: white;
 }
-#aliment
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+
 #ingrédient p:hover
 {
     width: 105px;
@@ -349,59 +199,3 @@ input[type=text] {
 
 
 /*______________________________________________________________________________________*/
-@media (max-width: 480px)
-{
-    /*entete*/
-    #titre
-    {
-        margin: auto;
-        text-align: center;
-        position:absolute;
-        top: 1%;
-        left: 26%;
-        font-family: 'Floral-Three-Demo';
-    }
-    h1
-    {
-        margin: auto;
-        font-size: 50px;
-    }
-    #entete img
-    {
-        width: 105%;
-    }
-    /*présentation*/
-    #présentation 
-    {
-        width: 70%;
-        margin: auto;
-        margin-top: 3%;
-        padding: 2%;
-        text-align: center;
-        box-shadow: 5px 5px 15px 5px rgba(109,166,195,255) ;
-    }
-    /* barre de recherche*/
-    #searchbar
-    {
-        margin-top:8% ;
-        margin-left: 20%;
-        padding:15px;
-        border-radius: 10px;
-        margin-bottom: 5%;
-        
-    }
-    input[type=text] {
-        width: 50%;
-        -webkit-transition: width 0.15s ease-in-out;
-        transition: width 0.15s ease-in-out;
-    }
-
-    /* When the input field gets focus,
-        change its width to 100% */
-    input[type=text]:focus {
-    width: 70%;
-    }
-
-
-
-}
