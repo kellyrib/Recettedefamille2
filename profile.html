@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/ce06ba3e20.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer>
+    
+  </script>
+
+
+  <title>Recette de famille</title>
+</head>
+
+<body>
+  <div class="container-fluid sticky-top ">
+    <section class="row ">
+      <div class="col-12 col-md-12 col-lg-12 col-xxl-12 ">
+        <nav class="navbar bg-light" style="background-image: url(./images/mosaique.jpg) ;">
+          <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand " href="./index.html">
+              <img src="./images/logoRecette-removebg-preview.png" alt="Logo" width="120" height="120"
+                class="d-inline-block align-center rounded-circle custom-shadow">
+            </a>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand custom-vert" href="./index.html">Recette de famille</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                  <a class="nav-link active custom-bleu " aria-current="page" href="./livre.html">Livre de recette</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active custom-bleu" href="./menu.html">Menu de la semaine</a>
+                </li>
+                <li class="nav-item dropdown">
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2  " type="search" placeholder="Rechercher une recette"
+                  aria-label="Search">
+                <button class="btn custom-bleu  " type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+  </div>
+
+
+  <!--*******************Card Form profile******************************-->
+  <section class="container py-5">
+    <div class="col-12 col-md-8 col-lg-8 offset-md-2 pt-4">
+      <!-- form user info -->
+      <div class="card card-outline-secondary custom-shadow-card">
+        <div class="card-header custom-bg-bleu bg-gradient text-light">
+          <h3 class="mb-0 text-center">User Information</h3>
+        </div>
+        <div class="card-body">
+          <form class="form p-2" th:action="@{/profile}" th:object="${updateCurrentUser}" action="#" role="form"
+            autocomplete="off" method="post">
+            <p th:text="${message}" class="custom-bleu bold my-2 fs-6">
+              message updated
+            </p>
+            <!--***************************** Nom **********************************-->
+            <div class="form-group row ">
+              <label class="col-md-2 col-lg-3 col-form-label form-control-label">Nom</label>
+              <div class="col-lg-9 py-1">
+                <input id="nom" name="nom" class="form-control "  style="width: 100%;" type="text" value="Jane">
+                <p class="m-1"></p>
+              </div>
+            </div>
+            <!--***************************** Prenom **********************************-->
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Prénom</label>
+              <div class="col-lg-9 py-1">
+                <input th:value="${currentUser.lastName}" id="prenom" name="prenom" class="form-control" style="width: 100%;" type="text"
+                  value="Doe">
+                <p class="m-1"></p>
+              </div>
+            </div>
+            <!--***************************** Email **********************************-->
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Identifiant</label>
+              <div class="col-lg-9 py-1">
+                <p th:text="${currentUser.email}" name="email" id="email">exemple@email.fr</p>
+              </div>
+            </div>
+            <!--***************************** Password *********************************-->
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Password</label>
+              <div class="col-lg-9 py-1">
+                <input id="password" name="password" class="form-control" type="password" value="1234588555884">
+                <p class="m-1" th:if="${#fields.hasAnyErrors()}" th:errors="*{password}" th:errorclass="error"></p>
+              </div>
+            </div>
+            <!--***************************** ConfirmPassword **********************************-->
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label form-control-label">Confirme</label>
+              <div class="col-lg-9 py-1">
+                <input id="confirmPassword" name="confirmPassword" class="form-control" type="password"
+                  value="1234588555884">
+                <p class="m-1" th:if="${#fields.hasAnyErrors()}" th:errors="*{confirmPassword}" th:errorclass="error">
+                </p>
+              </div>
+            </div>
+            <!--***************************** Button save Changes **********************************-->
+            <div class="col-12 col-md-6 col-lg-3 form-group row my-4 mx-auto">
+              <label class="col-lg-3 col-form-label form-control-label"></label>
+              <input type="submit" class="btn custom-bg-bleu btn-block text-light" value="Save Changes">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--fin container-->
+  </section>
+
+
+</body>
